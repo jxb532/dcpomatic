@@ -80,6 +80,7 @@ public:
 		return _video_container_size;
 	}
 
+	static void maybe_add_asset (std::list<ReferencedReelAsset>& a, boost::shared_ptr<dcp::ReelAsset> r, Frame reel_trim_start, Frame reel_trim_end, dcpomatic::DCPTime from, int const ffr);
 	void set_video_container_size (dcp::Size);
 	void set_ignore_video ();
 	void set_ignore_audio ();

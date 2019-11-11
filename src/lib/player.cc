@@ -476,8 +476,8 @@ Player::set_play_referenced ()
 	setup_pieces_unlocked ();
 }
 
-static void
-maybe_add_asset (list<ReferencedReelAsset>& a, shared_ptr<dcp::ReelAsset> r, Frame reel_trim_start, Frame reel_trim_end, DCPTime from, int const ffr)
+void
+Player::maybe_add_asset (list<ReferencedReelAsset>& a, shared_ptr<dcp::ReelAsset> r, Frame reel_trim_start, Frame reel_trim_end, DCPTime from, int const ffr)
 {
 	DCPOMATIC_ASSERT (r);
 	r->set_entry_point (r->entry_point().get_value_or(0) + reel_trim_start);

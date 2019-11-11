@@ -372,7 +372,7 @@ ReelWriter::finish ()
 
 template <class T>
 shared_ptr<T>
-maybe_add_text (
+ReelWriter::maybe_add_text (
 	shared_ptr<dcp::SubtitleAsset> asset,
 	int64_t picture_duration,
 	shared_ptr<dcp::Reel> reel,

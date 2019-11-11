@@ -70,6 +70,7 @@ public:
 	void write (PlayerText text, TextType type, boost::optional<DCPTextTrack> track, dcpomatic::DCPTimePeriod period);
 
 	void finish ();
+	template <class T> boost::shared_ptr<T> maybe_add_text (boost::shared_ptr<dcp::SubtitleAsset> asset, int64_t picture_duration, boost::shared_ptr<dcp::Reel> reel, std::list<ReferencedReelAsset> const & refs, std::list<boost::shared_ptr<dcpomatic::Font>> const & fonts, boost::shared_ptr<const Film> film, dcpomatic::DCPTimePeriod period);
 	boost::shared_ptr<dcp::Reel> create_reel (std::list<ReferencedReelAsset> const & refs, std::list<boost::shared_ptr<dcpomatic::Font> > const & fonts);
 	void calculate_digests (boost::function<void (float)> set_progress);
 
