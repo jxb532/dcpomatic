@@ -38,6 +38,7 @@
 #include <boost/enable_shared_from_this.hpp>
 #include <list>
 #include <stdint.h>
+#include <pthread_np.h>
 
 class Film;
 class EncodeServerDescription;

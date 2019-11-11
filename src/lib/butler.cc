@@ -85,7 +85,7 @@ Butler::Butler (
 	_player_change_connection = _player->Change.connect (bind (&Butler::player_change, this, _1), boost::signals2::at_front);
 	_thread = new boost::thread (bind (&Butler::thread, this));
 #ifdef DCPOMATIC_LINUX
-	pthread_setname_np (_thread->native_handle(), "butler");
+	pthread_set_name_np (_thread->native_handle(), "butler");
 #endif
 
 	/* Create some threads to do work on the PlayerVideos we are creating; at present this is used to

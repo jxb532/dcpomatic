@@ -31,6 +31,7 @@
 #include <boost/signals2.hpp>
 #include <boost/thread.hpp>
 #include <string>
+#include <pthread_np.h>
 
 class Film;
 

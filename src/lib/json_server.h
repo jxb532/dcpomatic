@@ -19,6 +19,7 @@
 */
 
 #include <boost/asio.hpp>
+#include <pthread_np.h>
 
 class JSONServer
 {

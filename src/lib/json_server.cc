@@ -54,7 +54,7 @@ JSONServer::JSONServer (int port)
 {
 	thread* t = new thread (boost::bind (&JSONServer::run, this, port));
 #ifdef DCPOMATIC_LINUX
-	pthread_setname_np (t->native_handle(), "json-server");
+	pthread_set_name_np (t->native_handle(), "json-server");
 #endif
 }
 

@@ -28,6 +28,7 @@
 #include "exception_store.h"
 #include <boost/signals2.hpp>
 #include <boost/thread/condition.hpp>
+#include <pthread_np.h>
 
 class Socket;
 

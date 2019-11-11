@@ -28,6 +28,7 @@
 #include <boost/thread/mutex.hpp>
 #include <boost/thread/condition.hpp>
 #include <boost/thread.hpp>
+#include <pthread_np.h>
 
 struct update_checker_test;
 

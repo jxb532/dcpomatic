@@ -109,7 +109,7 @@ Writer::start ()
 {
 	_thread = new boost::thread (boost::bind (&Writer::thread, this));
 #ifdef DCPOMATIC_LINUX
-	pthread_setname_np (_thread->native_handle(), "writer");
+	pthread_set_name_np (_thread->native_handle(), "writer");
 #endif
 }
 

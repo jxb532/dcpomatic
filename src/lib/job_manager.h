@@ -28,6 +28,7 @@
 #include <boost/signals2.hpp>
 #include <boost/thread/condition.hpp>
 #include <list>
+#include <pthread_np.h>
 
 class Job;
 class Film;

@@ -29,6 +29,7 @@
 #include <boost/thread/condition.hpp>
 #include <boost/signals2.hpp>
 #include <boost/asio.hpp>
+#include <pthread_np.h>
 
 class Player;
 class PlayerVideo;

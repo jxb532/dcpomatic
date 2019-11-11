@@ -31,6 +31,7 @@
 #include <boost/asio.hpp>
 #include <boost/thread/condition.hpp>
 #include <string>
+#include <pthread_np.h>
 
 class Socket;
 class Log;

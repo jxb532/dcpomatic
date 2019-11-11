@@ -58,8 +58,8 @@ EncodeServerFinder::start ()
 	_search_thread = new boost::thread (boost::bind (&EncodeServerFinder::search_thread, this));
 	_listen_thread = new boost::thread (boost::bind (&EncodeServerFinder::listen_thread, this));
 #ifdef DCPOMATIC_LINUX
-	pthread_setname_np (_search_thread->native_handle(), "encode-server-search");
-	pthread_setname_np (_listen_thread->native_handle(), "encode-server-listen");
+	pthread_set_name_np (_search_thread->native_handle(), "encode-server-search");
+	pthread_set_name_np (_listen_thread->native_handle(), "encode-server-listen");
 #endif
 }
 

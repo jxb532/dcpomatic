@@ -56,7 +56,7 @@ JobManager::start ()
 {
 	_scheduler = new boost::thread (boost::bind (&JobManager::scheduler, this));
 #ifdef DCPOMATIC_LINUX
-	pthread_setname_np (_scheduler->native_handle(), "job-scheduler");
+	pthread_set_name_np (_scheduler->native_handle(), "job-scheduler");
 #endif
 }
 
