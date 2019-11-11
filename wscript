@@ -499,6 +499,7 @@ def configure(conf):
     			    int main() { boost::regex re ("foo"); }\n
 			    """,
                        msg='Checking for boost regex library',
+                       libpath='/usr/local/lib',
                        lib=['boost_regex%s' % boost_lib_suffix],
                        uselib_store='BOOST_REGEX')
 
