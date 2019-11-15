@@ -258,6 +258,9 @@ def configure(conf):
     # cairomm
     conf.check_cfg(package='cairomm-1.0', args='--cflags --libs', uselib_store='CAIROMM', mandatory=True)
 
+    # custom built mntent for BSD
+    conf.check_cfg(package='mntent', args='--cflags --libs', uselib_store='MNTENT', mandatory=True)
+
     test_cxxflags = ''
     if have_c11:
         test_cxxflags = '-std=c++11'
